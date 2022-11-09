@@ -1,0 +1,19 @@
+{
+    "name": "hextel/code",
+    "description": "Some description will be useful too!",
+    "autoload": {
+        "psr-4": {
+            "Hextel\\Code\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "alex"
+        }
+    ],
+    "require": {},
+    "bin": [
+        "bin/brain-games"
+    ]
+
+}
