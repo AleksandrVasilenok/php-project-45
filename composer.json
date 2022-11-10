@@ -1,6 +1,9 @@
 {
-    "name": "brain/games",
-    "description": "Some description will be useful too!",
+    "authors": [
+        {
+            "name": "alex"
+        }
+    ],
     "autoload": {
         "files": [
             "src/Cli.php"
@@ -9,16 +12,15 @@
             "BrainGames\\": "src/"
         }
     },
-    "authors": [
-        {
-            "name": "alex"
-        }
+    "bin": [
+        "bin/brain-games"
     ],
+    "description": "Some description will be useful too!",
+    "name": "brain/games",
     "require": {
         "wp-cli/php-cli-tools": "^0.11.16"
     },
-    "bin": [
-        "bin/brain-games"
-    ]
-
+    "require-dev": {
+        "squizlabs/php_codesniffer": "3.*"
+    }
 }
