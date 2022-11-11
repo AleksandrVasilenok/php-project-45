@@ -5,36 +5,45 @@ namespace BrainGames\Even;
 use function cli\line;
 use function cli\prompt;
 
-function even($name): void
+function playEvenGame($name): void
 {
-    $test = true;
-    line('Answer "yes" if the number is even, otherwise answer "no".');
-    for ($count = 0; $count != 3; $count++) {
-        if ($test) {
-            echo "Question: ";
-            $randomNumber = rand(1, 10);
-            echo $randomNumber . "\n";
-            $answer = prompt('Your answer');
-            $test = isEven($answer, $randomNumber, $name, $test);
-        } else {
+    $rules = getRules(); // общая
+    line($rules); // общая
+    for ($round = 0; $round != 3; $round++) { // общая логика
+        line("Question: "); //общий
+        $randomNumber = rand(1, 10); // ивен
+        line($randomNumber . "\n"); // ивен
+        $answer = prompt('Your answer'); // общий
+        $isCorrect = isCorrect($answer, $randomNumber, $name); // ивен
+        if (!$isCorrect) { // общая (можно пока оставить у ивен)
             break;
         }
     }
-    if ($count === 3) {
-        print_r("Congratulations, $name! \n");
+
+    if ($round === 3) { // общий
+        line("Congratulations, $name! \n");
     }
 }
 
-function isEven($answer, $randomNumber, $name, $test): bool
+function isCorrect($answer, $randomNumber, $name): bool // ивен
 {
-    if ($answer == 'yes' && $randomNumber % 2 == 0) {
+    $isEven = $randomNumber % 2 === 0;
+    if ($answer == 'yes' && $isEven) {
         line("Correct");
-    } elseif ($answer == 'no' && $randomNumber % 2 != 0) {
-        line("Correct");
-    } else {
-        $correctAnswer = $randomNumber % 2 == 0 ? 'yes' : 'no';
-        line("'$answer' is wrong answer ;(. Correct answer was '$correctAnswer'.\nLet's try again,$name !");
-        $test = false;
+        return true;
     }
-    return $test;
+
+    if ($answer == 'no' && !$isEven) {
+        line("Correct");
+        return true;
+    }
+
+    $correctAnswer = $isEven ? 'yes' : 'no';
+    line("'$answer' is wrong answer ;(. Correct answer was '$correctAnswer'.\nLet's try again, $name!");
+    return false;
+}
+
+function getRules(): string // ивен
+{
+    return 'Answer "yes" if the number is even, otherwise answer "no".';
 }

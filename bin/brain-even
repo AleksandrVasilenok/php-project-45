@@ -6,5 +6,5 @@ require_once __DIR__ . '/../vendor/autoload.php';
 use BrainGames\Even;
 use brainGames\cli;
 
-$name = Cli\welcome();
-Even\even($name);
+$name = Cli\welcome(); // общая
+Even\playEvenGame($name);
