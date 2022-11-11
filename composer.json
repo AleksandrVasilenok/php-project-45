@@ -6,14 +6,16 @@
     ],
     "autoload": {
         "files": [
-            "src/Cli.php"
+            "src/Cli.php",
+            "src/Even.php"
         ],
         "psr-4": {
             "BrainGames\\": "src/"
         }
     },
     "bin": [
-        "bin/brain-games"
+        "bin/brain-games",
+        "bin/brain-even"
     ],
     "description": "Some description will be useful too!",
     "name": "brain/games",
