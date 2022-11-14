@@ -3,10 +3,9 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use BrainGames\Even;
-use brainGames\cli;
+use BrainGames\cli;
+use BrainGames\Calc;
 use BrainGames\Engine;
 
 $name = Cli\welcome(); // общая
-Engine\play(Even\playEvenGame(), $name, Even\isCorrect());
-
+Engine\play(Calc\playCalcGame(), $name, Calc\isCorrect() ,  );
