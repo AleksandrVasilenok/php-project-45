@@ -7,5 +7,5 @@ use BrainGames\cli;
 use BrainGames\Calc;
 use BrainGames\Engine;
 
-$name = Cli\welcome(); // общая
-Engine\play(Calc\playCalcGame(), $name, Calc\isCorrect() ,  );
+$name = Cli\welcome();
+Engine\play(Calc\playCalcGame(), $name, Calc\GetRules());

@@ -7,6 +7,6 @@ use BrainGames\Even;
 use brainGames\cli;
 use BrainGames\Engine;
 
-$name = Cli\welcome(); // общая
-Engine\play(Even\playEvenGame(), $name, Even\isCorrect());
+$name = Cli\welcome();
+Engine\play(Even\playEvenGame(), $name, Even\getRules());
 

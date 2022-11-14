@@ -6,8 +6,6 @@ use function cli\line;
 
 function playEvenGame(): callable
 {
-    $rules = getRules();
-    line($rules); // в Engine
     return function ()
     {
         $randomNumber = rand(1, 10);
@@ -16,7 +14,7 @@ function playEvenGame(): callable
     };
 }
 
-function correctAnswer($randomNumber): string // ивен
+function correctAnswer($randomNumber): string
 {
      if ($randomNumber % 2 === 0) {
         return 'yes';
@@ -25,19 +23,10 @@ function correctAnswer($randomNumber): string // ивен
      return 'no';
 }
 
-function isCorrect(): callable
-{
-    return function ($answer, $correctAnswer) { // убрать в Engine
-        if ($correctAnswer != $answer) {
-            return false;
-        } else {
-            line("Correct!");
-            return true;
-        }
+function getRules(): callable
+{   return function ()
+    {
+        return 'Answer "yes" if the number is even, otherwise answer "no".';
     };
-}
 
-function getRules(): string // ивен
-{
-    return 'Answer "yes" if the number is even, otherwise answer "no".';
 }
