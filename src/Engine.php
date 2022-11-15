@@ -5,7 +5,7 @@ namespace BrainGames\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function play(callable $func, string $name, callable $getRules): void // $name сделать 1 входным параметром
+function play(string $name, callable $func, callable $getRules): void
 {
     line($getRules());
     for ($round = 0; $round < 3; $round++) {

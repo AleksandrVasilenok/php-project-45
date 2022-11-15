@@ -9,4 +9,4 @@ use BrainGames\Engine;
 
 
 $name = Cli\welcome();
-Engine\play(Gcd\playGamesGcd(), $name, BrainGames\Gcd\GetRules());
+Engine\play($name, Gcd\playGamesGcd(), BrainGames\Gcd\getRules());

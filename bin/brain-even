@@ -8,5 +8,5 @@ use brainGames\cli;
 use BrainGames\Engine;
 
 $name = Cli\welcome();
-Engine\play(Even\playEvenGame(), $name, Even\getRules());
+Engine\play($name, Even\playEvenGame(), Even\getRules());
 
