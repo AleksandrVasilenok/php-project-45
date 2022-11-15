@@ -1,12 +1,12 @@
 #!/usr/bin/env php
+
 <?php
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use BrainGames\Cli;
-use BrainGames\Gcd;
+use BrainGames\Progression;
 use BrainGames\Engine;
 
-
 $name = Cli\welcome();
-Engine\play($name, Gcd\playGamesGcd(), Gcd\getRules());
+Engine\play($name, Progression\playProgressionGames(), Progression\getRules());

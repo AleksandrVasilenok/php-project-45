@@ -32,7 +32,7 @@ function correctAnswer(int $firstNumber, int $secondNumber, string $mathOperator
     return 0;
 }
 
-function GetRules(): callable
+function getRules(): callable
 {   return function ()
     {
         return 'What is the result of me expression?';

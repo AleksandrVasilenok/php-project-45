@@ -10,7 +10,8 @@
             "src/Games/Even.php",
             "src/Games/Calc.php",
             "src/Engine.php",
-            "src/Games/Gcd.php"
+            "src/Games/Gcd.php",
+            "src/Games/Progression.php"
         ],
         "psr-4": {
             "BrainGames\\": "src/"
@@ -20,7 +21,8 @@
         "bin/brain-games",
         "bin/brain-even",
         "bin/brain-calc",
-        "bin/brain-gcd"
+        "bin/brain-gcd",
+        "bin/brain-progression"
     ],
     "description": "Some description will be useful too!",
     "name": "brain/games",
