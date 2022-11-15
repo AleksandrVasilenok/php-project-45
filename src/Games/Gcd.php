@@ -30,7 +30,7 @@ function correctAnswer(int $firstNumber, int $secondNumber): int
     return array_product($result);
 }
 
-function getRules(): callable // методы с маленькой буквы
+function getRules(): callable
 {
     return function () {
         return "Find the greatest common divisor of given numbers.";
