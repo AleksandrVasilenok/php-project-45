@@ -7,14 +7,13 @@ use function cli\prompt;
 
 function welcome(): void
 {
-    line('999');
     line('Welcome to the Brain Game!');
 
 }
-
-function whatYouName(): string
-{
-    $name = prompt('May I have your name?');
-    line("Hello, %s!", $name);
-    return $name;
-}
+//
+//function whatYouName(): string
+//{
+//    $name = prompt('May I have your name?');
+//    line("Hello, %s!", $name);
+//    return $name;
+//}
