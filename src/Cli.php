@@ -7,6 +7,7 @@ use function cli\prompt;
 
 function welcome(): void
 {
+    line('999');
     line('Welcome to the Brain Game!');
 
 }
