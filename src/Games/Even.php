@@ -8,7 +8,7 @@ function playEvenGame(): callable
 {
     return function () {
         $randomNumber = rand(1, 10);
-        line($randomNumber);
+        line('Question: %s', $randomNumber);
         return correctAnswer($randomNumber);
     };
 }
