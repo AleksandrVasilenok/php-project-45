@@ -20,7 +20,6 @@ function playProgressionGames(): callable
         $progression = implode(' ', $progression);
         line($progression);
         return $correctAnswer;
-
     };
 }
 

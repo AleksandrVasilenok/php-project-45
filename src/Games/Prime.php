@@ -7,7 +7,7 @@ use function cli\line;
 function playPrimeGames(): callable
 {
     return function () {
-        line($number = rand(1,100));
+        line($number = rand(1, 100));
         $x = 2;
         $multiplierNumbers = [];
         while ($number !== 1) {
@@ -20,8 +20,6 @@ function playPrimeGames(): callable
         }
         return correctAnswer($multiplierNumbers);
     };
-
-
 }
 
 function correctAnswer($multiplierNumbers): string

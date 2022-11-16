@@ -8,4 +8,4 @@ use BrainGames\Calc;
 use BrainGames\Engine;
 
 $name = Cli\welcome();
-Engine\play($name, Calc\playCalcGame(), Calc\GetRules());
+Engine\play($name, Calc\playCalcGame(), Calc\getRules());
