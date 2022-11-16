@@ -17,11 +17,9 @@ function play(string $name, callable $func, callable $getRules): void
             line("Correct!");
         } else {
             line("'$userAnswer' is wrong answer ;(. Correct answer was '$correctAnswer'.\nLet's try again, $name!");
-            break;
+            return;
         }
     }
 
-    if ($i === 3) {
-        line("Congratulations, $name!");
-    }
+    line("Congratulations, $name!");
 }
