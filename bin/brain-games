@@ -4,7 +4,6 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use BrainGames\Cli;
-use function cli\line;
 
-//Cli\welcome();
-line("/Welcome to the Brain Games!/");
+Cli\welcome();
+
