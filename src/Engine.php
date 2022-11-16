@@ -5,10 +5,12 @@ namespace BrainGames\Engine;
 use function cli\line;
 use function cli\prompt;
 
+const ROUNDS_COUNT = 3;
+
 function play(string $name, callable $func, callable $getRules): void
 {
     line($getRules());
-    for ($round = 0; $round < 3; $round++) {
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $correctAnswer = $func();
         $userAnswer = prompt('Your answer');
         if ($correctAnswer == $userAnswer) {
@@ -19,7 +21,7 @@ function play(string $name, callable $func, callable $getRules): void
         }
     }
 
-    if ($round === 3) {
+    if ($i === 3) {
         line("Congratulations, $name!");
     }
 }
