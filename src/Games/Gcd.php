@@ -20,7 +20,7 @@ function correctAnswer(int $firstNumber, int $secondNumber): int
     $multiplierSecondNumber = getMultiplierNumbers($secondNumber);
     $result = [];
     foreach ($multiplierFirstNumber as $item) {
-        $search = array_search($item, $multiplierSecondNumber);
+        $search = array_search($item, $multiplierSecondNumber, true);
         if ($search !== false) {
             $result[] = $item;
             unset($multiplierSecondNumber[$search]);
@@ -37,7 +37,7 @@ function getRules(): callable
     };
 }
 
-function getMultiplierNumbers($number): array
+function getMultiplierNumbers(int $number): array
 {
     $x = 2;
     $multiplierNumbers = [];

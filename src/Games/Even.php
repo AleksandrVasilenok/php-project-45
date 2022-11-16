@@ -13,7 +13,7 @@ function playEvenGame(): callable
     };
 }
 
-function correctAnswer($randomNumber): string
+function correctAnswer(int $randomNumber): string
 {
     if ($randomNumber % 2 === 0) {
         return 'yes';

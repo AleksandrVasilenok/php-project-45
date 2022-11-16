@@ -22,7 +22,7 @@ function playPrimeGames(): callable
     };
 }
 
-function correctAnswer($multiplierNumbers): string
+function correctAnswer(array $multiplierNumbers): string
 {
     if (count($multiplierNumbers) < 2) {
         return "yes";
