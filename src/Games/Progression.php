@@ -18,7 +18,7 @@ function playProgressionGames(): callable
         $correctAnswer = $progression[$randomIndexArr];
         $progression[$randomIndexArr] = '..';
         $progression = implode(' ', $progression);
-        line($progression);
+        line('Question: %s', $progression);
         return $correctAnswer;
     };
 }

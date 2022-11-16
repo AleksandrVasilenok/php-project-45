@@ -9,7 +9,7 @@ function playGamesGcd(): callable
     return function () {
         $firstNumber = rand(10, 100);
         $secondNumber = rand(10, 100);
-        line("$firstNumber $secondNumber");
+        line('Question: %s', "$firstNumber $secondNumber");
         return correctAnswer($firstNumber, $secondNumber);
     };
 }

@@ -10,7 +10,7 @@ function playCalcGame(): callable
         $firstNumber = rand(1, 10);
         $secondNumber = rand(1, 10);
         $mathOperator = randomMathOperator();
-        line($firstNumber . ' ' . $mathOperator . ' ' . $secondNumber);
+        line('Question: %s', $firstNumber . ' ' . $mathOperator . ' ' . $secondNumber);
         return correctAnswer($firstNumber, $secondNumber, $mathOperator);
     };
 }
