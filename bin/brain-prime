@@ -1,0 +1,11 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use BrainGames\Cli;
+use BrainGames\Engine;
+use BrainGames\Prime;
+
+$name = Cli\welcome();
+Engine\play($name, Prime\playPrimeGames(), Prime\getRules());
