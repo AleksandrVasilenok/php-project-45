@@ -28,7 +28,7 @@
         "bin/brain-prime"
     ],
     "description": "Some description will be useful too!",
-    "name": "hexlet/code",
+    "name": "brain/games",
     "require": {
         "wp-cli/php-cli-tools": "^0.11.16"
     },
