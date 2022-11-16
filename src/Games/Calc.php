@@ -35,7 +35,7 @@ function correctAnswer(int $firstNumber, int $secondNumber, string $mathOperator
 function getRules(): callable
 {
     return function () {
-        return 'What is the result of me expression?';
+        return 'What is the result of the expression?';
     };
 }
 
